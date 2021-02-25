@@ -30,8 +30,13 @@ steps:
 
 - task: VSTest@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    testSelector: testAssemblies 
-    testAssemblyVer2: '**/*Test/*.csproj' 
+   testSelector: 'testAssemblies'
+   codeCoverageEnabled: true
+   testAssemblyVer2: |
+      **\*Tests.dll
+      !**\ref\**
+      !**\*TestAdapter.dll
+      !**\obj\**
+   platform: '$(buildPlatform)'
+   configuration: '$(buildConfiguration)'
 
