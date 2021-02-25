@@ -20,5 +20,20 @@ namespace UnitTest
             // Assert
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void BasketFiller_Standard_Case_No2()
+        {
+            // Arrange
+            var test1 = new int[] { 1, 1, 10, 5, 0, 1, 2, 6 };
+            var limit1 = 18;
+            var expected = new int[] { 1, 1, 10, 5, 0, 1 };
+
+            // Act
+            var result = Program.BasketFiller(test1, limit1);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
     }
 }
