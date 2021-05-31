@@ -4,7 +4,7 @@ using BasketFiller;
 
 namespace UnitTest
 {
-    public class UnitTest1
+    public class UnitTests
     {
         [Fact]
         public void BasketFiller_Standard_Case()
